@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background: rgb(0, 0, 0);
+  font-family: Kanit;
+  font-weight: bold;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+ul {
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #404040;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  width: 50%;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  margin-left: 110px;
+  text-decoration: none;
+}
+
+li a:hover {
+  box-shadow: 0px 10px 20px 10px rgb(0, 0, 0) inset;
+}
+
+.nav_icon {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+#result {
+  font-size: 30px;
+  font-family: inherit;
+  color: #404040;
+  text-align: center;
+}
+
+.place_collection {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #404040;
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-right: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\2B8B";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.get_collection {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
+  background: #404040;
+  opacity: 50%;
+  height: 35px;
+  width: 40%;
+  border-radius: white 2px;
+}
