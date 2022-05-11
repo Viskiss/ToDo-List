@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Kaushan+Script&display=swap"
       rel="stylesheet"
@@ -15,7 +15,7 @@
     <div class="container">
       <div class="navigation">
         <ul>
-          <li><img class="nav_icon" src="/image/laptop.png" alt="icon" /></li>
+          <li><img class="nav_icon" src="./image/laptop.png" alt="icon" /></li>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -32,7 +32,7 @@
           <button class="button" style="vertical-align: middle">
             <span>Add</span>
           </button>
-          <input class="get_collection" type="text" />
+          <input class="get_collection" type="text" placeholder="" />
         </div>
       </div>
     </div>
@@ -40,11 +40,11 @@
     <script>
       var text = "update your to-do list";
       var delay = 100; // cкорость
-      var elem = document.getElementById("result");
+      var elem = document.querySelector(".get_collection");
 
       var print_text = function (text, elem, delay) {
         if (text.length > 0) {
-          elem.innerHTML += text[0];
+          elem.placeholder += text[0];
           setTimeout(function () {
             print_text(text.slice(1), elem, delay);
           }, delay);
