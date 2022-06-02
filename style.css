@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background: rgb(0, 0, 0);
   font-family: Kanit;
   font-weight: bold;
 }
@@ -11,62 +10,49 @@ body {
 }
 
 .container {
+  padding-top: 50px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 ul {
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  box-shadow: 0 0 2px 2px rgb(172, 172, 172) inset;
   list-style-type: none;
-  margin: 0;
-  padding: 5px;
+  margin:10px;
+  padding:0 ;
   overflow: hidden;
-  background-color: #404040;
+  background-color: #adadad47;
 }
 
 li {
-  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 15px;
+  width: 100%;
+  border: 3px white;
+  background-color: #ffffff74;
+  width: inherit;
+
+  cursor: default;
+  position: relative;
+  user-select: none;
+  transition: background-color 0.2s linear;
 }
 
-li a {
-  width: 50%;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  margin-left: 110px;
-  text-decoration: none;
-}
-
-li a:hover {
-  box-shadow: 0px 10px 20px 10px rgb(0, 0, 0) inset;
-}
-
-.nav_icon {
-  margin-top: 5px;
-  margin-left: 10px;
-  width: 45px;
-  height: 45px;
-}
-
-#result {
-  font-size: 30px;
-  font-family: inherit;
-  color: #404040;
-  text-align: center;
-}
-
-.place_collection {
+.Todo_up {
   text-align: center;
   margin-top: 10px;
 }
 
-.button {
+.button_form {
   display: inline-block;
   border-radius: 2px;
-  background-color: #404040;
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
+  background-color: #adadad;
+  box-shadow: 0 0 2px 2px rgb(172, 172, 172) inset;
   border: none;
   color: #ffffff;
   text-align: center;
@@ -81,14 +67,14 @@ li a:hover {
   margin-right: 5px;
 }
 
-.button span {
+.button_form span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.button_form span:after {
   content: "\2B8B";
   position: absolute;
   opacity: 0;
@@ -97,22 +83,100 @@ li a:hover {
   transition: 0.5s;
 }
 
-.button:hover span {
+.button_form:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.button_form:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-.get_collection {
+#clearButton {
+  border-radius: 2px;
+  background-color: #adadad;
+  box-shadow: 0 0 2px 2px rgb(172, 172, 172) inset;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 5px;
+  width: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-right: 5px;
+}
+
+.input_todo {
   font-size: 15px;
   color: rgb(255, 255, 255);
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0) inset;
-  background: #404040;
+  box-shadow: 0 0 2px 2px rgb(172, 172, 172) inset;
+  background: rgb(172, 172, 172);
   opacity: 50%;
   height: 35px;
   width: 40%;
-  border-radius: white 2px;
+}
+
+svg {
+  vertical-align: middle;
+  fill: rgba(0, 0, 0, 0.57);
+}
+
+.buttonList {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  height: 3.2rem;
+  width: 3.2rem;
+  overflow: hidden;
+}
+
+.buttonList::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  /* left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; */
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.253);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.buttonList:active::after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+}
+
+.view {
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0 1rem 0 4.8rem;
+}
+
+li.edit .view {
+  display: none;
+}
+
+
+.empty_list_section {
+  justify-content: center;
+}
+
+.empty_list_img {
+  padding: 15px;
+}
+
+.arrowDown {
+  cursor: pointer;
 }
